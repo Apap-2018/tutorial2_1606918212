@@ -1,0 +1,39 @@
+Latihan Project Viral
+
+1.
+a. Tidak
+b. Ketika diakses localhost, terdapat whitelabel error page. Hal ini terjadi karena mapping dari /viral diubah menjadi /viral2jari. 
+c. Gunanya adalah untuk menampilkan barisan kode yang kita tampilkan. Apabila mapping kita ke /viral, maka kita pun harus mengakses localhost:8080/viral. Apabila menjadi /viral2jari, maka linknya harus diganti pula jadi localhost:8080/viral2jari.
+
+2.
+a. Tidak
+b. Halaman yang ingin ditampilkan muncul karena tidak masalah bila kita mengganti nama methodnya.
+
+3. 
+a. Tidak
+b. Terjadi whitelabel error page, karena return type diganti viral2jari sedangkan yang ada adalah viral.html bukan viral2jari.html
+c. return type menunjukkan file mana yang ingin kita tampilkan/akses.
+
+
+Latihan Request Parameter
+
+1. Tidak muncul karena diabaikan dan akan memunculkan th:text
+
+2. Terdapat whitelabel error saat mengakses localhost:8080/challenge?name=kiki. Dapat diakses pada localhost:8080/viral/challenge?name=kiki
+
+3. 
+a. Whitelabel error, karena atribut name tidak diisi sehingga tidak dapat memunculkan file challenge.html
+
+b. Akan muncul null sebagai name. Hal ini karena atribut name tidak diisi sehingga default null. Kenapa tidak error? Karena terdapat param bahwa atribut name required false, alias tidak perlu diisi tidak apa-apa.
+
+c. Akan muncul kiki sebagai name. Hal ini karena atribut name diset value defaultnya menjadi "kiki". Kenapa tidak error? Karena terdapat param bahwa atribut name required false, alias tidak perlu diisi tidak apa-apa dan akan mengembalikan value default.
+
+
+Latihan Path Variable
+
+1. Akan muncul "kiki do you love me?" "Are you riding?"
+
+2. Akan terjadi Whitelabel error, karena ambigu dengan method challenge yang memiliki request mapping yang sama yaitu /challenge
+
+3. "kiki do you love me?" "Are you riding?" valuenya akan berubah menjadi kiki. bila kita mengakses localhost:8080/challenge/kirana maka akan muncul "kirana do you love me?" "Are you riding?"
+
